@@ -1,10 +1,10 @@
-# Get Started
+# How to Get Started
 
 Your own branch is already created, named `member/<your-name>`. 
 
-Please fork **this** repo and for each week's assignment, create a branch `<week-number>/<topic-name>`. For example, for week 2, your branch will be called `week2/breadth-first-search`.
+Please fork **this** repo, and, in your **forked** repo, create a branch with the name of `<week-number>/<topic-name>` for each week's assignment. For example, your week 2 branch should be called `week2/solutions`.
 
-You will mainly work off the `<week-number>/<topic-name>` branch in your **forked** repo.
+You will mainly work off the `<week-number>/solutions` branch in your **forked** repo.
 
 When you finish the assignment, open up a pull request to merge it to the `member/<your-name>` branch in **this** primary repo.
 
@@ -20,3 +20,9 @@ Topics are listed as below:
 * Week 6: dynamic-programming 
 * Week 7: topological-sort 
 * Week 8: bit-manipulation 
+
+# How to Contribute
+
+You need to update the `README.md`, which contains problems others need to solve, of your chosen topic prior to our weekly disccusion.
+
+Similarly, you will prepare the problem set on a branch (can be named like `<week-number>/problem-set`) in your **forked** repo and request to merge it into **this** repo's master branch when you are ready.
