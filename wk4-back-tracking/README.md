@@ -10,7 +10,7 @@
 [Leetcode 216: Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)
 
 ## Problem 4
-[Leetcode 46: Permutations](https://leetcode.com/problems/permutations/)
+[Leetcode 37: Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
 
 ## Problem 5
 [Leetcode 47: Permutations II](https://leetcode.com/problems/permutations-ii/)
