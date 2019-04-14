@@ -1,19 +1,17 @@
-# Week 7: Topological Sand/ort
+# Week 7: Topological Sort
 
 ## Problem 1
-#problem description and/or link here#
+[207: Course Schedule](https://leetcode.com/problems/course-schedule/)
 
 ## Problem 2
-#problem description and/or link here#
+[210: Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
 
 ## Problem 3
-#problem description and/or link here#
+[802: Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/)
 
 ## Problem 4
-#problem description and/or link here#
+[329: Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
 
 ## Problem 5
-#problem description and/or link here#
+269: Alien Dictionary (optional, accessable only to premium users)
 
-## Problem 6
-#problem description and/or link here#
