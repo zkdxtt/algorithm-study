@@ -24,7 +24,31 @@ class Solution(object):
 ## Problem 2
 [Leetcode 52: N-Queens II](https://leetcode.com/problems/n-queens-ii/)
 ```python
-
+class Solution(object):
+    def __init__(self):
+        self.count=0
+    def totalNQueens(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        def check(k,j):
+            for i in range(k):
+                if board[i]==j or abs(k-i)==abs(board[i]-j):
+                    return False
+            return True
+        def dfs(depth):
+            if depth==n:
+                self.count+=1
+                return
+            for i in range(n):
+                if check(depth,i):
+                    board[depth]=i
+                    s='.'*n
+                    dfs(depth+1)
+        board=[-1 for i in range(n)]
+        dfs(0)
+        return self.count
 ```
 
 ## Problem 3
@@ -60,6 +84,39 @@ class Solution(object):
 ## Problem 4
 [Leetcode 37: Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
 ```python
+class Solution(object):
+    def check(self, x, y, board):
+        tmp = board[x][y]
+        board[x][y] = '.'
+        for row in range(9):
+            if board[row][y] == tmp:
+                return False
+        for col in range(9):
+            if board[x][col] == tmp:
+                return False
+        for row in range(3):
+            for col in range(3):
+                if board[(x / 3) * 3 + row][(y / 3) * 3 + col] == tmp:
+                    return False
+        board[x][y] = tmp
+        return True
+    def dfs(self, board):
+        for row in range(9):
+            for col in range(9):
+                if board[row][col] == '.':
+                    for char in '123456789':
+                        board[row][col] = char
+                        if self.check(row, col, board) and self.dfs(board):
+                            return True
+                        board[row][col] = '.'
+                    return False
+        return True
+    def solveSudoku(self, board):
+        """
+        :type board: List[List[str]]
+        :rtype: None Do not return anything, modify board in-place instead.
+        """
+        self.dfs(board)
 ```
 
 
