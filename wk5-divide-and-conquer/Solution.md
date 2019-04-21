@@ -36,6 +36,29 @@ class Solution(object):
 
 ## Problem 2
 [LEETCODE 43: Multiply Strings](https://leetcode.com/problems/multiply-strings/)
+```python
+class Solution(object):
+    def multiply(self, num1, num2):
+        """
+        :type num1: str
+        :type num2: str
+        :rtype: str
+        """
+        if num1 == '0' or num2 == '0':
+            return '0'
+        ans = 0
+        for i, n1 in enumerate(num2[::-1]):
+            pre = 0
+            curr = 0
+            for j, n2 in enumerate(num1[::-1]):
+                multi = (ord(n1) - ord('0')) * (ord(n2) - ord('0'))
+                first, second = multi // 10, multi % 10
+                curr += (second + pre) * (10 ** j)
+                pre = first
+            curr += pre * (10 ** len(num1))
+            ans += curr * (10 ** i)
+        return str(ans)
+```
 
 ## Problem 3
 [LEETCODE 4: Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
@@ -155,3 +178,16 @@ class Solution(object):
 
 ## Problem 6
 [LEETCODE 932: Beautiful Array](https://leetcode.com/problems/beautiful-array/)
+```python
+class Solution(object):
+    def beautifulArray(self, N):
+        """
+        :type N: int
+        :rtype: List[int]
+        """
+
+        res = [1]
+        while len(res) < N:
+            res = [2*i - 1 for i in res] + [2*i for i in res]
+        return [i for i in res if i <= N]
+```
